@@ -82,11 +82,11 @@
 
 <style>
     .logo.vite:hover {
-        filter: drop-shadow(0 0 2em #747bff);
+        filter: drop-shadow(0 0 2em var(--overlay2));
     }
 
     .logo.svelte-kit:hover {
-        filter: drop-shadow(0 0 2em #ff3e00);
+        filter: drop-shadow(0 0 2em var(--overlay2));
     }
 
     :root {
@@ -95,8 +95,8 @@
         line-height: 24px;
         font-weight: 400;
 
-        color: #0f0f0f;
-        background-color: #f6f6f6;
+        color: var(--surface0);
+        background-color: var(--subtext1);
 
         font-synthesis: none;
         text-rendering: optimizeLegibility;
@@ -122,7 +122,7 @@
     }
 
     .logo.tauri:hover {
-        filter: drop-shadow(0 0 2em #24c8db);
+        filter: drop-shadow(0 0 2em var(--teal));
     }
 
     .row {
@@ -132,12 +132,12 @@
 
     a {
         font-weight: 500;
-        color: #646cff;
+        color: var(--teal);
         text-decoration: inherit;
     }
 
     a:hover {
-        color: #535bf2;
+        color: var(--sapphire);
     }
 
     h1 {
@@ -152,8 +152,8 @@
         font-size: 1em;
         font-weight: 500;
         font-family: inherit;
-        color: #0f0f0f;
-        background-color: #ffffff;
+        color: var(--surface0);
+        background-color: var(--text);
         transition: border-color 0.25s;
         box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
     }
@@ -163,11 +163,12 @@
     }
 
     .btn-primary:hover {
-        border-color: #396cd8;
+        border-color: var(--blue);
+        background-color: var(--subtext1);
     }
     .btn-primary:active {
-        border-color: #396cd8;
-        background-color: #e8e8e8;
+        border-color: var(--blue);
+        background-color: var(--subtext0);
     }
 
     input,
@@ -181,27 +182,37 @@
 
     @media (prefers-color-scheme: dark) {
         :root {
-            color: #f6f6f6;
-            background-color: #2f2f2f;
+            color: var(--subtext1);
+            background-color: var(--crust);
         }
 
         a:hover {
-            color: #24c8db;
+            color: var(--teal);
+        }
+
+        img[src*='mdi:window-minimize'],
+        img[src*='mdi:window-maximize'],
+        img[src*='mdi:close'] {
+            filter: invert(1) brightness(0.8) contrast(1);
         }
 
         input,
         .btn-primary {
-            color: #ffffff;
-            background-color: #0f0f0f98;
+            color: var(--text);
+            background-color: var(--surface0);
         }
         .btn-primary:active {
-            background-color: #0f0f0f69;
+            background-color: var(--surface0);
+        }
+        .btn-primary:hover {
+            color: var(--text);
+            background-color: var(--surface1);
         }
     }
 
     .titlebar {
-        height: 30px;
-        background: #329ea3;
+        height: 35px;
+        background: var(--base);
         user-select: none;
         display: flex;
         justify-content: flex-end;
@@ -209,18 +220,6 @@
         top: 0;
         left: 0;
         right: 0;
-    }
-    .titlebar-button {
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        width: 30px;
-        height: 30px;
-        user-select: none;
-        -webkit-user-select: none;
-    }
-    .titlebar-button:hover {
-        background: #5bbec3;
     }
 
     .titlebar .titlebar-button {
@@ -231,16 +230,21 @@
         font: inherit;
         line-height: initial;
 
+        opacity: 1;
+
         cursor: pointer;
         display: inline-flex;
         justify-content: center;
         align-items: center;
-        width: 30px;
-        height: 30px;
+        width: 35px;
+        height: 35px;
+
+        user-select: none;
+        -webkit-user-select: none;
     }
 
     .titlebar .titlebar-button:hover {
-        background: #5bbec3;
+        background: var(--surface0);
         border-color: transparent;
     }
 </style>
