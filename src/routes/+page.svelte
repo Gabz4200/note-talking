@@ -104,19 +104,74 @@
         class:collapsed={isLeftSidebarCollapsed}
         class:is-resizing={isLeftResizing}
     >
-        <div class="sidebar-header">
-            <h3>Notas</h3>
-            <button class="toggle-btn" onclick={toggleLeftSidebar}>
-                {isLeftSidebarCollapsed ? '→' : '←'}
-            </button>
+        <div class="sidebar-content-wrapper">
+            <div class="sidebar-header">
+                <h3>Notas</h3>
+                <button class="toggle-btn" onclick={toggleLeftSidebar}>
+                    {isLeftSidebarCollapsed ? '→' : '←'}
+                </button>
+            </div>
+            <div class="sidebar-content">
+                <!-- Placeholder for your notes list -->
+                <a href="#/" class="note-item active"># geral</a>
+                <a href="#/" class="note-item"># ideias-projeto</a>
+                <a href="#/" class="note-item"># rascunhos</a>
+                <a href="#/" class="note-item"># links-uteis</a>
+            </div>
         </div>
-        <div class="sidebar-content">
-            <!-- Placeholder for your notes list -->
-            <a href="#/" class="note-item active"># geral</a>
-            <a href="#/" class="note-item"># ideias-projeto</a>
-            <a href="#/" class="note-item"># rascunhos</a>
-            <a href="#/" class="note-item"># links-uteis</a>
-        </div>
+        <footer class="sidebar-footer">
+            <div class="user-profile">
+                <div class="avatar"></div>
+                <div class="user-info">
+                    <span class="username">Gabiru</span>
+                    <span class="user-status">Online</span>
+                </div>
+            </div>
+            <div class="user-actions">
+                <button
+                    class="icon-btn"
+                    title="Microfone"
+                    aria-label="Microfone"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        ><path
+                            d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"
+                        ></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"
+                        ></path><line x1="12" y1="19" x2="12" y2="23"
+                        ></line></svg
+                    >
+                </button>
+                <button
+                    class="icon-btn"
+                    title="Configurações"
+                    aria-label="Configurações"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        ><circle cx="12" cy="12" r="3"></circle><path
+                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
+                        ></path></svg
+                    >
+                </button>
+            </div>
+        </footer>
     </aside>
 
     <!-- Resizer Handle for Left Sidebar -->
@@ -127,6 +182,74 @@
 
     <!-- Main Content Area -->
     <main class="content-area">
+        <header class="content-header">
+            <div class="channel-info">
+                <span class="channel-icon">#</span>
+                <span class="channel-name">geral</span>
+                <div class="channel-description">
+                    Tópicos gerais e anotações rápidas.
+                </div>
+            </div>
+            <div class="header-actions">
+                <button
+                    class="icon-btn"
+                    title="Notificações"
+                    aria-label="Notificações"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        ><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"
+                        ></path><path d="M13.73 21a2 2 0 0 1-3.46 0"
+                        ></path></svg
+                    >
+                </button>
+                <button class="icon-btn" title="Fixados" aria-label="Fixados">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        ><path
+                            d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"
+                        ></path></svg
+                    >
+                </button>
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscar" />
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="search-icon"
+                        ><circle cx="11" cy="11" r="8"></circle><line
+                            x1="21"
+                            y1="21"
+                            x2="16.65"
+                            y2="16.65"
+                        ></line></svg
+                    >
+                </div>
+            </div>
+        </header>
         <div class="messages-container">
             <!-- Placeholder for chat/note content -->
             <div class="message">
@@ -154,7 +277,73 @@
         </div>
 
         <div class="input-footer">
-            <input type="text" placeholder="Escreva sua anotação aqui..." />
+            <div class="input-wrapper">
+                <!-- svelte-ignore a11y_consider_explicit_label -->
+                <button class="input-action-btn" title="Anexar arquivo">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        ><circle cx="12" cy="12" r="10"></circle><line
+                            x1="12"
+                            y1="8"
+                            x2="12"
+                            y2="16"
+                        ></line><line x1="8" y1="12" x2="16" y2="12"
+                        ></line></svg
+                    >
+                </button>
+                <input type="text" placeholder="Conversar em #geral..." />
+                <div class="quick-actions">
+                    <!-- svelte-ignore a11y_consider_explicit_label -->
+                    <button class="input-action-btn" title="Presente">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            ><polyline points="20 12 20 22 4 22 4 12"
+                            ></polyline><rect x="2" y="7" width="20" height="5"
+                            ></rect><line x1="12" y1="22" x2="12" y2="7"
+                            ></line><path
+                                d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"
+                            ></path><path
+                                d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"
+                            ></path></svg
+                        >
+                    </button>
+                    <!-- svelte-ignore a11y_consider_explicit_label -->
+                    <button class="input-action-btn" title="Emoji">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            ><circle cx="12" cy="12" r="10"></circle><path
+                                d="M8 14s1.5 2 4 2 4-2 4-2"
+                            ></path><line x1="9" y1="9" x2="9.01" y2="9"
+                            ></line><line x1="15" y1="9" x2="15.01" y2="9"
+                            ></line></svg
+                        >
+                    </button>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -171,19 +360,31 @@
         class:collapsed={isRightSidebarCollapsed}
         class:is-resizing={isRightResizing}
     >
-        <div class="sidebar-header">
-            <h3>Contexto</h3>
-            <button class="toggle-btn" onclick={toggleRightSidebar}>
-                {isRightSidebarCollapsed ? '←' : '→'}
-            </button>
-        </div>
         <div class="sidebar-content">
-            <!-- Placeholder -->
-            <p class="context-title">Online - 2</p>
-            <div class="context-item">Usuário A</div>
-            <div class="context-item">Usuário B</div>
-            <p class="context-title">Offline - 1</p>
-            <div class="context-item offline">Usuário C</div>
+            <div class="context-section">
+                <h4 class="context-title">ONLINE — 2</h4>
+                <div class="context-item">
+                    <div class="avatar online"></div>
+                    <div class="context-user-info">
+                        <span class="username">Usuário A</span>
+                    </div>
+                </div>
+                <div class="context-item">
+                    <div class="avatar online"></div>
+                    <div class="context-user-info">
+                        <span class="username">Usuário B</span>
+                    </div>
+                </div>
+            </div>
+            <div class="context-section">
+                <h4 class="context-title">OFFLINE — 1</h4>
+                <div class="context-item">
+                    <div class="avatar"></div>
+                    <div class="context-user-info">
+                        <span class="username">Usuário C</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </aside>
 </div>
@@ -243,6 +444,7 @@
 
     .left-sidebar {
         width: 240px;
+        justify-content: space-between;
     }
 
     .right-sidebar {
@@ -256,12 +458,14 @@
     }
 
     .sidebar.collapsed .sidebar-content,
-    .sidebar.collapsed .sidebar-header h3 {
+    .sidebar.collapsed .sidebar-header h3,
+    .sidebar.collapsed .sidebar-footer {
         display: none; /* Hide content and title when collapsed */
     }
 
     .sidebar.collapsed .sidebar-header {
         justify-content: center; /* Center the toggle button */
+        height: 100%;
     }
 
     .sidebar-header {
@@ -343,6 +547,65 @@
         min-width: 300px;
     }
 
+    /* Content Header */
+    .content-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem var(--padding);
+        border-bottom: 1px solid var(--surface0);
+        flex-shrink: 0;
+    }
+    .channel-info {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+    .channel-icon {
+        color: var(--overlay1);
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    .channel-name {
+        font-weight: 600;
+        color: var(--text);
+    }
+    .channel-description {
+        font-size: 0.8rem;
+        color: var(--subtext0);
+        padding-left: 0.75rem;
+        border-left: 1px solid var(--surface1);
+    }
+    .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    .search-bar {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    .search-bar input {
+        background-color: var(--mantle);
+        border: none;
+        border-radius: 4px;
+        padding: 0.4rem 0.5rem 0.4rem 2rem;
+        color: var(--text);
+        font-size: 0.9rem;
+        width: 140px;
+        transition: width 0.3s ease;
+    }
+    .search-bar input:focus {
+        width: 200px;
+        outline: none;
+    }
+    .search-icon {
+        position: absolute;
+        left: 0.5rem;
+        color: var(--overlay2);
+    }
+
     .messages-container {
         flex-grow: 1;
         overflow-y: auto;
@@ -375,30 +638,105 @@
         margin-top: 0.25rem;
     }
 
+    /* Sidebar Footer */
+    .sidebar-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5rem;
+        background-color: var(--base);
+        flex-shrink: 0;
+    }
+    .user-profile {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+    .avatar {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: var(--peach);
+        position: relative;
+    }
+    .avatar.online::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: var(--green);
+        border: 2px solid var(--crust);
+    }
+    .user-info {
+        display: flex;
+        flex-direction: column;
+    }
+    .username {
+        font-weight: 600;
+        font-size: 0.9rem;
+    }
+    .user-status {
+        font-size: 0.75rem;
+        color: var(--subtext0);
+    }
+    .user-actions {
+        display: flex;
+        gap: 0.25rem;
+    }
+    .icon-btn {
+        background: none;
+        border: none;
+        color: var(--overlay2);
+        cursor: pointer;
+        padding: 0.4rem;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .icon-btn:hover {
+        background-color: var(--surface1);
+        color: var(--text);
+    }
+
     /* Input Footer Styles */
     .input-footer {
-        padding: var(--padding);
-        padding-top: 0;
+        padding: 0 var(--padding) var(--padding);
     }
-
-    .input-footer input {
+    .input-wrapper {
+        display: flex;
+        align-items: center;
+        background-color: var(--surface0);
+        border-radius: var(--border-radius);
+        padding: 0 0.5rem;
+    }
+    .input-wrapper input {
         width: 100%;
-        padding: 0.8em 1.2em;
+        padding: 0.8em 0.5em;
         font-size: 1em;
         font-family: inherit;
-        background-color: var(--surface0);
+        background-color: transparent;
         color: var(--text);
-        border: 1px solid var(--surface1);
-        border-radius: var(--border-radius);
+        border: none;
         outline: none;
-        transition:
-            border-color 0.25s,
-            background-color 0.25s;
     }
-
-    .input-footer input:focus {
-        border-color: var(--blue);
+    .input-action-btn {
+        background: none;
+        border: none;
+        color: var(--overlay2);
+        cursor: pointer;
+        padding: 0.5rem;
+        border-radius: 50%;
+    }
+    .input-action-btn:hover {
+        color: var(--text);
         background-color: var(--surface1);
+    }
+    .quick-actions {
+        display: flex;
     }
 
     /* Placeholder Content Styles */
@@ -420,20 +758,35 @@
         color: var(--text);
     }
 
+    /* Right Sidebar Content Styles */
+    .context-section {
+        margin-bottom: 1.5rem;
+    }
     .context-title {
         color: var(--subtext0);
         font-weight: bold;
-        margin-top: 1rem;
-        margin-bottom: 0.5rem;
         padding: 0 0.5rem;
-        font-size: 0.9em;
+        font-size: 0.8rem;
+        margin-bottom: 0.75rem;
+        text-transform: uppercase;
     }
     .context-item {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
         padding: 0.5rem;
-        color: var(--subtext1);
         border-radius: 6px;
+        cursor: pointer;
     }
-    .context-item.offline {
-        color: var(--overlay1);
+    .context-item:hover {
+        background-color: var(--surface0);
+    }
+    .context-item .avatar {
+        width: 32px;
+        height: 32px;
+    }
+    .context-user-info {
+        display: flex;
+        flex-direction: column;
     }
 </style>
